@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/navy"
+    tools:context=".AddContactActivity">
+
+    <TextView
+        android:id="@+id/txt_page_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Add Contacts"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textAlignment="center"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/white_top_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="55dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/img_placeholder"
+                                tools:ignore="ContentDescription" />
+                        </androidx.cardview.widget.CardView>
+                        <ImageView
+                            android:id="@+id/img_edit_contact"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="15dp"
+                            android:layout_margin="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_edit"
+                            android:foreground="@drawable/primary_color_ripple"/>
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="66dp"
+                        android:layout_marginTop="30dp"
+                        android:padding="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="Name"
+                        android:textSize="20sp"
+                        android:textColor="@color/navy"
+                        android:inputType="text"
+                        android:drawableStart="@drawable/ic_user"
+                        android:drawablePadding="10dp"
+                        android:background="@drawable/edt_bg"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/edt_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="66dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="Title"
+                        android:textSize="20sp"
+                        android:textColor="@color/navy"
+                        android:inputType="text"
+                        android:drawableStart="@drawable/ic_title"
+                        android:drawablePadding="10dp"
+                        android:background="@drawable/edt_bg"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/edt_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="66dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="Phone"
+                        android:textSize="20sp"
+                        android:textColor="@color/navy"
+                        android:inputType="phone"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:drawablePadding="10dp"
+                        android:background="@drawable/edt_bg"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/edt_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="66dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="15dp"
+                        android:gravity="center_vertical"
+                        android:hint="Email"
+                        android:textSize="20sp"
+                        android:textColor="@color/navy"
+                        android:inputType="textEmailAddress"
+                        android:drawableStart="@drawable/ic_email"
+                        android:drawablePadding="10dp"
+                        android:background="@drawable/edt_bg"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/gradient_bg"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_reset"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:text="Reset"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:foreground="@drawable/white_ripple_round"
+                android:background="@drawable/decline_btn_bg"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Add"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:foreground="@drawable/white_ripple_round"
+                android:background="@drawable/primary_btn_bg"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
